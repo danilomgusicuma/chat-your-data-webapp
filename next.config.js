@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+
+nextConfig = {
+  reactStrictMode: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'gw.alipayobjects.com',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
+}
 
 module.exports = nextConfig
